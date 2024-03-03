@@ -1,0 +1,179 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 4s ease-out;
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Loading bar styling */
+.loading-bar {
+    height: 4px;
+    /* Adjust the height of the loading bar */
+    background-color: #3498db;
+    /* Adjust the color of the loading bar */
+    animation: loading 5s linear;
+    /* Adjust the duration of the animation */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes writeText {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+/* Style for the text */
+.typewriter {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* white-space: pre-wrap; */
+    /* font-size: 1.2rem; */
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em;
+    /* Adjust as needed */
+    animation:
+        typing 7s steps(150, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .scrolling-container1 {
+        display: flex;
+        /* overflow-x: hidden;
+    white-space: nowrap; */
+        /* width: 100%; */
+        animation: scroll1 15s linear 1;
+    }
+
+    @keyframes scroll1 {
+        0% {
+            transform: translateX(15%);
+            overflow: hidden;
+            /* transform: translateX(-10%); */
+        }
+
+        100% {
+            /* transform: translateX(0%); */
+            transform: translateX(-90%);
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .scrolling-container2 {
+        display: flex;
+        /* width: 200%; */
+        animation: scroll2 15s linear 1;
+    }
+
+    @keyframes scroll2 {
+        0% {
+            /* transform: translateX(0); */
+            transform: translateX(-90%);
+        }
+
+        100% {
+            transform: translateX(15%);
+            /* transform: translateX(-50%); */
+            /* transform: translateX(-50%); */
+        }
+    }
+}
+
+.scale {
+    animation: scroll3;
+
+}
+
+@keyframes scroll3 {
+    0% {
+        /* transform: translateX(0); */
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+        /* transform: translateX(-50%); */
+        /* transform: translateX(-50%); */
+    }
+}
